@@ -10,8 +10,8 @@ class SentenceTokenizer(object):
     def __init__(self):
         self.kkma = Kkma()
         self.twitter = Okt()
-        self.stopwords = ['중인' ,'만큼', '마찬가지', '꼬집었', "연합뉴스", "데일리", "동아일보", "중앙일보", "조선일보", "기자"
-,"아", "휴", "아이구", "아이쿠", "아이고", "어", "나", "우리", "저희", "따라", "의해", "을", "를", "에", "의", "가",]
+        self.stopwords = ['중인' ,'만큼', '마찬가지', '꼬집었', "연합뉴스", "데일리", "동아일보", "중앙일보", "조선일보", "기자", "뉴스"
+,"아", "휴", "아이구", "아이쿠", "아이고", "어", "나", "우리", "저희", "따라", "의해", "을", "를", "에", "의", "가", "사람"]
     def url2sentences(self, url):
         article = Article(url, language='ko')
         article.download()

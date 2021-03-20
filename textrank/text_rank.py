@@ -36,7 +36,7 @@ class TextRank(object):
 
         return summary
     
-    def keywords(self, word_num=10):
+    def keywords(self, word_num=5):
         rank = Rank()
         rank_idx = rank.get_ranks(self.words_graph)
         sorted_rank_idx = sorted(rank_idx, key=lambda k: rank_idx[k], reverse=True)
