@@ -9,6 +9,7 @@ news = f.read()
 
 okt = Okt()
 noun = okt.nouns(news)
+
 for i, word in enumerate(noun):
     if len(word) < 2:
         noun.pop(i)
