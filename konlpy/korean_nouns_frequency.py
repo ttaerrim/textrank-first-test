@@ -1,6 +1,6 @@
 from konlpy.tag import Okt
 from collections import Counter
-import os
+import csv
 
 
 filename = './news.txt'
@@ -14,9 +14,13 @@ for i, word in enumerate(noun):
         noun.pop(i)
 
 count = Counter(noun)
+f.close()
 
 noun_list = count.most_common(100)
 for word in noun_list:
     print(word)
 
-f.close()
+with open("noun_list.txt", 'w', encoding='utf-8') as f:
+    for word in noun_list:
+        f.write(" ".join(map(str, word)))
+        f.write("\n")
