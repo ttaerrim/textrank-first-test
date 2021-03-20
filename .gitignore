@@ -1,2 +1,4 @@
 .trvenv/
 trvenv/
+
+.DS_Store
